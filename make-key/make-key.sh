@@ -4,13 +4,13 @@
 # root certificate.
 # Adapted by Mike Lindner from the OpenVPN Easy-RSA script
 # for Build Your Own Secure Personal Cloud
-# www.personalcloudbook.com
+# www.leanpub.com/cloudbook
 # Change the country variable /C to suit yours.
 
 if test $# -lt 1; then
         echo "usage: make-key <client-name> [<server-name>]";
         exit 1
-fi                                                                             
+fi
 
 mkdir $1
 openssl req -days 3650 \
@@ -47,4 +47,3 @@ client
 echo $CLIENT > $1/client.conf
 
 fi
-

@@ -1,0 +1,21 @@
+
+***************************
+
+Note!
+
+1. Only put the contents of this directory - NOT your entire CA directory - online!
+2. Make sure you include your PUBLIC key.  (And again NOT your private key.)
+3. Edit the html to match the name of your public key.
+4. Keep calm and rock on!
+
+***************************
+
+To serve the key well with Apache:
+
+edit /etc/apache2/mods-enabled/mime.conf
+
+And add the following line after `TypesConfig /etc/mime.types`
+
+   AddType application/x-x509-ca-cert .crt .cert .pem
+
+Reload the Apache configuration
